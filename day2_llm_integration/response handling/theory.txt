@@ -1,0 +1,25 @@
+--------- Response Handling ----------
+# Response Handling
+
+Response handling means processing the output returned by the AI model.
+
+# Important
+
+AI responses may contain:
+--> Text
+--> JSON
+--> Errors
+--> Metadata
+
+# Applications must properly extract useful information.
+
+--> Common Response Data
+
+    Field	                                    Meaning
+    content	                                    Generated text
+    role	                                    Speaker role
+    usage	                                    Token usage
+    finish_reason	                            Why generation stopped
+
+# Example Workflow
+User Input → AI Response → Extract Content → Display Result

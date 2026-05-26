@@ -1,0 +1,49 @@
+---------- Prompt Engineering -----------
+# Prompt
+
+A prompt is the instruction given to an AI model.
+
+Example:
+Explain Python in simple terms.
+
+# Prompt Engineering
+Prompt engineering means designing prompts carefully to get better AI responses.
+
+# Types of Prompts:
+
+    Type	                        Description
+    Zero-shot	                    No examples
+    One-shot	                    One example
+    Few-shot	                    Multiple examples
+    Chain-of-thought	            Step-by-step reasoning
+
+# Good Prompt Characteristics
+--> Clear
+--> Specific
+--> Structured
+--> Goal-oriented
+
+---------- Prompt Chaining -----------
+
+Prompt chaining means using one AI response as input for another prompt.
+
+# Workflow
+Prompt 1 → Response 1
+Response 1 → Prompt 2
+
+# Use Prompt Chaining
+
+Complex tasks can be divided into smaller tasks.
+
+# Example
+
+Step 1:
+Generate startup ideas
+
+Step 2:
+Create business plan from startup idea
+
+# Advantages:
+--> Better organization
+--> Improved accuracy
+--> Modular AI workflows

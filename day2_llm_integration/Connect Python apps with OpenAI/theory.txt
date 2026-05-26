@@ -1,0 +1,33 @@
+------- LLM Integration using Python ----------
+# LLM Integration
+LLM (Large Language Model) Integration means connecting your Python application with AI models such as:
+
+--> OpenAI GPT models
+--> Ollama local models
+--> Google Gemma models
+--> Llama models
+
+This allows applications to:
+
+--> Generate text
+--> Answer questions
+--> Summarize content
+--> Translate languages
+--> Generate code
+--> Build AI chatbots
+
+# Use Python for LLM Integration
+Python is commonly used because:
+
+--> Simple syntax
+--> Large AI ecosystem
+--> Many SDKs and libraries
+--> Strong community support
+
+Popular libraries:
+
+--> openai
+--> ollama
+--> transformers
+--> langchain
+

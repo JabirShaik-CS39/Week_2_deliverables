@@ -1,0 +1,29 @@
+---------- Streaming Outputs ----------
+Streaming means receiving AI-generated text gradually instead of waiting for the full response.
+
+# Like:
+# Normal:
+Wait → Full Response
+
+# Streaming:
+Word-by-word generation
+
+# Benefits of Streaming:
+
+--> Faster user experience
+--> Real-time interaction
+--> Better chatbot feeling
+
+# Streaming is Used
+--> Chatbots
+--> AI assistants
+--> Live coding tools
+--> Real-time content generation
+
+# Streaming Works
+The server sends small chunks continuously.
+
+#Example:
+Chunk 1 → Chunk 2 → Chunk 3
+
+# Your Python application prints chunks immediately.

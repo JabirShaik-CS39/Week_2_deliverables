@@ -1,0 +1,60 @@
+--------- OpenAI API ----------
+# OpenAI API
+
+--> The OpenAI API allows developers to communicate with AI models over the internet.
+
+--> The API works using HTTP requests.
+
+# Your Python application sends:
+
+--> Prompt
+--> Instructions
+--> Questions
+
+# AI returns:
+
+--> Responses
+--> Generated text
+--> Code
+--> Analysis
+
+# Components of OpenAI API
+
+API Key
+
+A secret key used for authentication.
+
+Example:
+
+sk-xxxxxxxxxxxxxxxx
+
+# Model
+Defines which AI model to use.
+Examples:
+
+--> gpt-4o-mini
+--> gpt-4.1
+--> gpt-4o
+
+# Messages
+
+Conversation format used by chat models.
+Roles include:
+
+Role	                        Purpose
+system	                        AI behavior
+user	                        User input
+assistant	                    AI response
+
+# Advantages
+
+--> Powerful AI capabilities
+--> Cloud-based
+--> High accuracy
+--> Supports streaming
+
+Limitations
+
+--> Requires internet
+--> Paid usage after limits
+--> API rate limits

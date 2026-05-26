@@ -1,0 +1,59 @@
+-------- Ollama API --------
+# Ollama:
+Ollama is a tool that allows you to run AI models locally on your computer.
+
+# Examples of local models:
+
+--> Llama 3
+--> Gemma
+--> Mistral
+
+# Use Ollama
+
+--> Works offline
+--> Better privacy
+--> No API costs
+--> Faster local responses
+
+# Ollama Works
+
+--> Install Ollama
+--> Download a model
+--> Run the model locally
+--> Connect Python application to the local server
+
+# Advantages
+
+--> No internet required
+--> Local execution
+--> Better data privacy
+
+# Disadvantages
+
+--> Requires good hardware
+--> Uses RAM/GPU heavily
+--> Slower on low-end systems
+
+# API Integration
+API Integration means connecting two software systems.
+
+In LLM integration:
+
+Python App → API Request → AI Model → API Response → Python App
+
+# Steps in Integration:
+--> Install SDK/library
+--> Import library
+--> Authenticate
+--> Send prompt
+--> Receive response
+--> Process output
+
+# Importance
+
+API integration enables:
+
+--> Automation
+--> AI assistants
+--> Smart applications
+--> Real-time AI systems
