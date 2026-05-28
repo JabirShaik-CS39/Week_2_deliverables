@@ -1,0 +1,34 @@
+---------- Vector Databases ----------
+Vector databases are databases designed to store and search vector embeddings efficiently.
+A vector embedding is a numerical representation of data such as:
+
+--> Text
+--> Images
+--> Audio
+--> PDFs
+These embeddings help AI systems understand semantic meaning instead of exact keyword matching.
+
+# Vector Databases Are Used
+Traditional databases search using:
+
+--> exact words
+--> filters
+--> SQL queries
+
+# Vector databases search using:
+
+--> meaning
+--> similarity
+--> context
+
+# Example:
+
+Query:
+"How to learn AI?"
+
+# The system may also retrieve:
+
+"Artificial Intelligence roadmap"
+"Machine learning beginner guide"
+
+even though exact words are different.

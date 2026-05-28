@@ -1,0 +1,102 @@
+---------- Similarity Search ----------
+Similarity Search is one of the most important concepts in modern AI systems, especially in:
+
+--> RAG (Retrieval-Augmented Generation)
+--> Semantic Search
+--> Recommendation Systems
+--> Chatbots
+--> Image Search
+--> Vector Databases
+Instead of searching for exact words, similarity search finds data that is meaningfully related.
+
+1.Similarity Search
+Similarity Search is a technique used to find items that are similar in meaning to a query.
+
+# Traditional search works like this:
+Search Query: "car"
+Result: Documents containing the word "car"
+
+# Similarity Search works like this:
+Search Query: "car"
+Result:
+- automobile
+- vehicle
+- sedan
+- electric vehicle
+It understands meaning, not just keywords.
+
+2.Traditional Search Fails
+Suppose we have these sentences:
+
+1. I love dogs
+2. Puppies are adorable
+3. Cats are independent
+
+# If the user searches:
+"cute dog"
+
+Keyword search may only match sentence 1.
+But similarity search understands:
+dog ≈ puppy
+cute ≈ adorable
+
+# So it retrieves:
+1. I love dogs
+2. Puppies are adorable
+This is called: Semantic Understanding
+
+3. Core Idea Behind Similarity Search
+Similarity Search converts text into numbers called:
+
+# Embeddings
+Embeddings are numerical vector representations of text.
+
+# Example:
+
+"dog" → [0.21, -0.44, 0.89, ...]
+"puppy" → [0.19, -0.40, 0.85, ...]
+
+Because the vectors are mathematically close, the system knows:
+dog ≈ puppy
+
+Similarity Search in RAG
+RAG = Retrieval-Augmented Generation.
+
+# This is where similarity search becomes extremely important.
+
+RAG Flow
+PDF
+ ↓
+Chunking
+ ↓
+Embeddings
+ ↓
+Vector Database
+ ↓
+Similarity Search
+ ↓
+Relevant Chunks Retrieved
+ ↓
+LLM Generates Answer
+
+# Example
+
+User asks:
+
+"What is transformer architecture?"
+
+# Similarity search retrieves chunks related to:
+
+Attention mechanism
+Encoder-decoder
+Self-attention
+Then LLM answers using retrieved data.
+
+# Advantages of Similarity Search
+
+Advantage	                            Explanation
+Semantic Understanding	                Understands meaning
+Flexible Matching	                    Finds related terms
+Better Search Results	                More relevant retrieval
+Essential for RAG	                    Enables contextual retrieval
+Scalable	                            Works with millions of vectors

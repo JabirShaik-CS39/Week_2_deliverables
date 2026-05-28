@@ -1,0 +1,83 @@
+---------- Document Ingestion ----------
+Document Ingestion in RAG (Retrieval-Augmented Generation)
+
+In a RAG pipeline, ingestion is the process of collecting documents, cleaning them, converting them into embeddings, and storing them in a vector database so that an LLM can retrieve relevant information later.
+
+What is Ingestion in RAG?
+
+Document ingestion is the first stage of a RAG system.
+
+It transforms raw data like:
+
+PDFs
+DOCX files
+Web pages
+Text files
+Database records
+
+into searchable vector embeddings.
+
+Complete RAG Ingestion Flow
+
+Raw Documents
+      ↓
+Document Loading
+      ↓
+Text Cleaning
+      ↓
+Chunking
+      ↓
+Embedding Generation
+      ↓
+Vector Database Storage
+      ↓
+Ready for Retrieval
+
+Step-by-Step Detailed Explanation
+
+1. Document Loading
+
+The system first reads documents from different sources.
+
+Supported Formats
+PDF
+TXT
+CSV
+DOCX
+HTML
+Websites
+APIs
+Example
+
+Suppose you upload a PDF:
+
+AI_Notes.pdf
+
+The ingestion system extracts text from it.
+
+2. Text Extraction
+
+The content inside the document is extracted.
+
+Example extracted text:
+
+Artificial Intelligence is the simulation of human intelligence by machines.
+3. Text Cleaning
+
+The extracted text may contain:
+
+Extra spaces
+Special symbols
+Empty lines
+Headers/footers
+
+Cleaning improves retrieval quality.
+
+Before Cleaning
+Page 1
+
+Artificial Intelligence     is the simulation...
+
+Footer text
+After Cleaning
+Artificial Intelligence is the simulation...

@@ -1,0 +1,154 @@
+---------- Embeddings ----------
+--> Embeddings in RAG (Retrieval-Augmented Generation)
+--> Embeddings are one of the most important concepts in RAG systems.
+--> They help computers understand the meaning of text instead of just matching keywords.
+
+1. Embeddings
+
+--> An embedding is a numerical vector representation of text.
+--> It converts words, sentences, or documents into lists of numbers that capture semantic meaning.
+
+Example:
+
+"I love AI"
+
+might become:
+
+[0.21, -0.44, 0.91, 0.11, ...]
+
+Another sentence with similar meaning:
+
+"I enjoy artificial intelligence"
+
+will produce a vector close to the first one.
+
+2. Embeddings are Important in RAG
+
+# RAG systems work like this:
+
+User Query
+     ↓
+Convert Query → Embedding
+     ↓
+Search Similar Document Embeddings
+     ↓
+Retrieve Relevant Chunks
+     ↓
+Send Context to LLM
+     ↓
+Generate Answer
+
+ Without embeddings:
+
+--> Search becomes keyword-based
+--> Results are less intelligent
+
+With embeddings:
+
+--> Semantic search becomes possible
+--> Meaning is understood
+--> Similar concepts are matched
+
+3. Real-Life Example
+
+Suppose your PDF contains:
+
+"Python is widely used in machine learning."
+
+User asks:
+"Where is Python used in AI?"
+
+Keyword search may fail because:
+"machine learning" ≠ "AI"
+
+Embedding search succeeds because:
+embeddings understand semantic similarity
+
+4. How Embeddings Work Internally
+Step 1 — Tokenization
+
+Text is split into tokens.
+
+Example:
+"Artificial Intelligence"
+
+becomes:
+["Artificial", "Intelligence"]
+
+Step 2 — Neural Network Processing
+A transformer model processes tokens and learns:
+
+--> context
+--> grammar
+--> relationships
+--> semantics
+
+Step 3 — Vector Generation
+The model outputs a high-dimensional vector.
+
+Example:
+[0.12, -0.91, 0.33, 0.77, ...]
+
+Typical dimensions:
+
+384
+768
+1024
+1536
+
+depending on the model.
+
+5. Similarity Search
+
+RAG compares vectors using mathematical distance.
+
+Most common:
+
+Cosine Similarity
+
+Measures angle between vectors.
+
+Formula
+similarity = A · B / (|A| |B|)
+
+Values:
+
+Score	Meaning
+1.0	Very similar
+0.8	Similar
+0.5	Somewhat related
+0.0	Unrelated
+
+6. Embedding Models
+
+Popular embedding models:
+
+Model	                        Provider
+text-embedding-3-small	        OpenAI
+text-embedding-3-large	        OpenAI
+all-MiniLM-L6-v2	            SentenceTransformers
+bge-small-en	                BAAI
+nomic-embed-text	            Nomic
+mxbai-embed-large	            MixedBread
+
+7. Embeddings in a RAG Pipeline
+
+Full Workflow
+
+PDF Documents
+      ↓
+Chunking
+      ↓
+Generate Embeddings
+      ↓
+Store in Vector Database
+      ↓
+User Query
+      ↓
+Query Embedding
+      ↓
+Similarity Search
+      ↓
+Retrieve Top Chunks
+      ↓
+LLM Generates Answer

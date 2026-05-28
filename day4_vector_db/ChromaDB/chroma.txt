@@ -1,0 +1,83 @@
+-------- ChromaDB Basics --------
+# ChromaDB
+Chroma is an open-source vector database mainly used for:
+
+--> RAG applications
+--> semantic search
+--> AI chatbots
+--> document retrieval
+
+# It stores:
+
+--> embeddings
+--> documents
+--> metadata
+--> IDs
+
+# Install ChromaDB
+pip install chromadb sentence-transformers
+# Basic ChromaDB Workflow
+Steps:
+--> Create embeddings
+--> Store embeddings
+--> Save documents
+--> Perform similarity search
+
+# folder structure 
+
+project/
+│
+├── data/
+│   └── pdfs/
+│
+├── chroma_db/
+│
+├── ingestion.py
+├── retrieval.py
+├── app.py
+└── requirements.txt
+
+
+# ChromaDB Works Internally
+Internal Workflow:
+1. Embedding Storage
+   Vectors are stored efficiently.
+
+2. Indexing
+   ChromaDB uses ANN (Approximate Nearest Neighbor) algorithms.
+   Usually:
+HNSW indexing
+This speeds up similarity search.
+
+3. Distance Calculation
+   Measures similarity mathematically.
+
+4. Retrieval
+   Returns top-k nearest vectors.
+
+# ChromaDB vs Traditional Database:
+
+Feature	                SQL DB	                        ChromaDB
+Exact Match	            Excellent	                    Moderate
+Semantic Search	        Poor	                        Excellent
+Embedding Storage	    No	                            Yes
+AI Integration	        Limited	                        Native
+Similarity Search	    Difficult	                    Easy
+
+# ChromaDB vs FAISS:
+
+Feature	                ChromaDB	                     FAISS
+Easy to Use	            Yes	                             Medium
+Metadata Support	    Yes	                             Limited
+Persistence	            Yes	                             Manual
+API Simplicity	        High	                         Medium
+Production Ready	    Good	                         Excellent
+
+
+Advantages of ChromaDB:
+
+--> Beginner friendly
+--> Lightweight
+--> Open source
+--> Easy Python integration
+--> Good for RAG systems

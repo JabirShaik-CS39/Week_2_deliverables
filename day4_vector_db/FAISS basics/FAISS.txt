@@ -1,0 +1,128 @@
+---------- FAISS ----------
+FAISS is an open-source library developed by Meta for efficient similarity search and clustering of dense vectors (embeddings).
+
+# FAISS stands for: Facebook AI Similarity Search
+It is mainly used in:
+
+--> Semantic Search
+--> RAG systems
+--> Recommendation Systems
+--> Image Retrieval
+--> Vector Databases
+--> AI Chatbots
+--> Embedding Search
+
+# FAISS Exists
+Modern AI models convert data into embeddings (vectors).
+
+Example:
+"I love AI" → [0.12, -0.45, 0.89, ...]
+
+These embeddings may contain:
+384 dimensions
+768 dimensions
+1536 dimensions
+even more
+
+# Now imagine:
+
+10 documents → easy search
+10 million embeddings → difficult search
+
+Normal search becomes slow because:
+Compare query vector with ALL vectors
+
+This is called:
+Brute Force Search
+
+Complexity:
+
+O(N)
+Where:
+N = number of vectors
+
+# FAISS solves this problem using:
+
+--> Efficient indexing
+--> Approximate Nearest Neighbor (ANN)
+--> GPU acceleration
+--> Compression techniques
+--> Core Concept of FAISS
+
+# FAISS helps answer:
+“Which vectors are most similar to my query vector?”
+
+This is called:
+Nearest Neighbor Search
+Simple Analogy
+
+Imagine:
+
+You have:
+1 million books
+each book converted into embeddings
+
+User asks:
+
+"Machine learning basics"
+
+FAISS finds:
+top similar embeddings
+very quickly
+
+# instead of checking every book one by one.
+
+# FAISS Workflow
+
+Documents
+    ↓
+Chunking
+    ↓
+Embeddings
+    ↓
+Store in FAISS Index
+    ↓
+User Query
+    ↓
+Convert query to embedding
+    ↓
+Similarity Search
+    ↓
+Retrieve top-k chunks
+
+
+# FAISS vs Traditional Database
+
+Traditional DB	                         FAISS
+Exact keyword matching	                 Semantic matching
+SQL search	Vector search
+Structured data	Embeddings
+Slow for semantic similarity	Optimized for vector similarity
+
+FAISS vs ChromaDB
+
+FAISS	                            ChromaDB
+Vector search library	            Full vector database
+Lightweight	                        Includes metadata
+Faster low-level control	        Easier developer experience
+No persistence by default	        Built-in persistence
+No API layer	                    Full database features
+
+# Advantages of FAISS
+
+Advantage	    Description
+Very Fast	    Optimized ANN search
+GPU Support	    Massive acceleration
+Scalable	    Billion-scale vectors
+Open Source	    Free
+Flexible	    Many indexing methods
+Efficient	    Low memory usage
+
+# Limitations of FAISS
+
+Limitation	                Description
+No metadata storage	        Only vectors
+Manual persistence	        Need save/load logic
+More low-level	            Less beginner friendly
+No built-in API	            Unlike vector DBs
+

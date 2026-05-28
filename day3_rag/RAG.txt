@@ -1,0 +1,146 @@
+---------- RAG ----------
+
+RAG (Retrieval-Augmented Generation) is an AI architecture that combines:
+
+Retrieval System → Searches relevant information from documents
+LLM (Large Language Model) → Generates answers using retrieved data
+
+Instead of relying only on pretrained knowledge, the model first searches your documents 
+and then answers.
+
+RAG combines information retrieval with Large Language Models (LLMs) to generate accurate, 
+context-aware responses using external knowledge sources.
+
+# Core Concepts of RAG:
+--> Retrieval
+--> Augmentation
+--> Generation
+--> Document Ingestion
+--> Chunking
+--> Embeddings
+--> Vector Database
+--> Semantic Search
+--> Similarity Search
+--> Prompt Engineering in RAG
+--> Context Window
+
+
+# Retrieval
+Retrieval means finding relevant information from a data source before generating an answer.
+
+Purpose
+LLMs have limited knowledge and may hallucinate. Retrieval helps provide real, updated, and domain-specific information.
+
+# Data Sources
+--> PDFs
+--> Databases
+--> Websites
+--> Text files
+--> Company documents
+--> Knowledge bases
+
+# Example
+User asks:
+
+“What is the leave policy of the company?”
+
+The system searches company HR documents and retrieves the relevant section.
+
+# Augmentation
+The retrieved information is added to the user query as context.
+
+# Process
+The system combines:
+--> User question
+--> Retrieved text chunks
+This enhanced prompt is sent to the LLM.
+
+# Example Prompt
+Context:
+Employees are allowed 12 casual leaves per year.
+
+Question:
+How many casual leaves are allowed?
+
+
+# Generation
+The LLM generates the final answer using:
+--> User query
+--> Retrieved context
+
+# Goal
+Produce:
+--> Accurate answers
+--> Context-aware responses
+--> Reduced hallucinations
+
+# Example Output
+Employees are allowed 12 casual leaves per year.
+
+
+---------- RAG Workflow ----------
+
+User Question
+      ↓
+Convert Question → Embedding
+      ↓
+Search Similar Chunks in Vector DB
+      ↓
+Retrieve Relevant Data
+      ↓
+Send Context + Question to LLM
+      ↓
+Generate Final Answer
+Core Concepts in RAG
+
+---------- End-to-End RAG Flow ----------
+
+Step-by-Step Pipeline
+
+    Documents
+        ↓
+    Document Ingestion
+        ↓
+    Chunking
+        ↓
+    Embeddings
+        ↓
+    Vector Database
+        ↓
+    User Query
+        ↓
+    Query Embedding
+        ↓
+    Similarity Search
+        ↓
+    Relevant Chunks Retrieved
+        ↓
+    Prompt Augmentation
+        ↓
+    LLM Generation
+        ↓
+    Final Response
+
+# Advantages of RAG
+
+--> Real-time knowledge access
+--> Reduced hallucinations
+--> Works with private data
+--> Better accuracy
+--> Domain-specific answers
+--> No need to retrain LLMs
+
+# Common RAG Applications
+--> Chatbots
+--> PDF question answering
+--> Customer support systems
+--> Legal document assistants
+--> HR policy assistants
+--> Medical knowledge systems
+--> Enterprise search engines
+
+# Popular RAG Frameworks
+--> LangChain
+--> LlamaIndex
+--> Haystack
+--> OpenAI

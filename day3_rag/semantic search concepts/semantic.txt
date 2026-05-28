@@ -1,0 +1,92 @@
+---------- Semantic Search ----------
+
+--> Semantic Search in RAG (Retrieval-Augmented Generation)
+Semantic search is one of the most important concepts in a RAG pipeline.
+Instead of searching documents using exact keywords, semantic search finds documents based on the meaning (semantics) of the query.
+
+1. Semantic Search
+Traditional search works like this:
+
+Query	Result
+"car repair"	Finds documents containing exactly "car repair"
+
+But semantic search understands meaning:
+
+Query	Semantic Understanding
+"fix my automobile"	Understands it is related to "car repair"
+
+This is extremely useful in RAG because users may ask questions in many different ways.
+
+2. Why Semantic Search is Used in RAG
+
+In RAG:
+
+--> Documents are stored
+--> Converted into embeddings (vectors)
+--> User asks a question
+--> Question also becomes an embedding
+--> Similar vectors are searched
+--> Most relevant chunks are retrieved
+--> LLM generates answer using retrieved context
+
+Without semantic search:
+
+--> Retrieval becomes weak
+--> Exact words are required
+--> Important information may not be found
+
+With semantic search:
+
+--> Meaning-based retrieval happens
+--> Better answers are generated
+--> Context becomes more relevant
+
+3. Core Idea Behind Semantic Search
+
+Semantic search uses:
+
+--> Embeddings
+--> Vector similarity
+--> Cosine similarity
+--> Dense vector representations
+
+4. What are Embeddings?
+Embeddings are numerical vector representations of text.
+
+Example:
+
+"I love AI"
+
+may become:
+[0.12, -0.45, 0.91, 0.33, ...]
+
+Texts with similar meanings have vectors close to each other.
+
+Example:
+
+Sentence	            Similarity
+"car repair"	         close
+"automobile fixing"	   close
+"pizza recipe"	         far
+
+5. Semantic Search Workflow in RAG
+
+Documents
+   ↓
+Chunking
+   ↓
+Embeddings Generation
+   ↓
+Store in Vector Database
+   ↓
+User Query
+   ↓
+Query Embedding
+   ↓
+Similarity Search
+   ↓
+Retrieve Relevant Chunks
+   ↓
+Send to LLM
+   ↓
+Final Answer

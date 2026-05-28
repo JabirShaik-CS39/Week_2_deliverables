@@ -1,0 +1,98 @@
+---------- PDF Processing Basics ----------
+
+PDF (Portable Document Format) processing is one of the most important concepts in document-based AI systems, especially in RAG (Retrieval-Augmented Generation) pipelines. PDF processing means extracting, cleaning, analyzing, and converting data from PDF files into machine-readable formats.
+
+# PDF
+A PDF is a file format created by Adobe for sharing documents while preserving:
+
+--> Layout
+--> Fonts
+--> Images
+--> Tables
+--> Formatting
+
+# PDFs are widely used for:
+
+--> Research papers
+--> Company reports
+--> Books
+--> Invoices
+--> Legal documents
+--> Resumes
+--> Manuals
+
+# PDF Processing is Important in AI & RAG
+Large Language Models cannot directly understand raw PDFs.
+
+# Before sending data to an LLM, we must:
+--> Read the PDF
+--> Extract text/images/tables
+--> Clean the content
+--> Split into chunks
+--> Convert into embeddings
+--> Store in vector databases
+This entire workflow starts with PDF processing.
+
+3. Types of PDF Content
+PDFs may contain different kinds of data.
+
+A. Text-Based PDFs
+These contain selectable text.
+
+Example:
+--> Research papers
+--> Digital books
+Easy to process.
+
+Extraction Method
+Text can be directly extracted using libraries like:
+
+--> PyPDF2
+--> pdfplumber
+--> PyMuPDF
+
+B. Scanned PDFs
+These are image-based PDFs.
+
+Example:
+--> Scanned documents
+--> Handwritten forms
+--> Photocopies
+Text is NOT selectable.
+
+# Extraction Method
+Requires OCR (Optical Character Recognition).
+
+Common OCR tools:
+--> Tesseract OCR
+--> EasyOCR
+--> Google Vision API
+
+C. Mixed PDFs
+Contain:
+--> Text
+--> Images
+--> Tables
+--> Graphs
+
+Most real-world business documents are mixed PDFs.
+
+4. PDF Processing Workflow
+
+PDF File
+   ↓
+Read PDF
+   ↓
+Extract Content
+   ↓
+Clean Text
+   ↓
+Detect Structure
+   ↓
+Chunking
+   ↓
+Embeddings
+   ↓
+Vector Database
+   ↓
+LLM Retrieval

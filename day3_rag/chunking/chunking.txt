@@ -1,0 +1,212 @@
+-------- Chunking in RAG --------
+
+In a RAG system, chunking is the process of splitting large documents into smaller meaningful pieces called chunks before converting them into embeddings and storing them in a vector database.
+
+Chunking is one of the most important parts of a RAG pipeline because it directly affects:
+
+--> Retrieval quality
+--> Search accuracy
+--> Context relevance
+--> LLM response quality
+--> Token efficiency
+
+# Chunking is Needed
+Large Language Models (LLMs) cannot process extremely large documents at once because of:
+--> Context window limitations
+--> Token limits
+--> Performance costs
+
+For example:
+A PDF with 200 pages cannot be directly sent to an LLM.
+
+Instead:
+--> Split document into chunks
+--> Convert chunks → embeddings
+--> Store embeddings in vector DB
+--> Retrieve relevant chunks during querying
+--> Send only relevant chunks to LLM
+------ Basic RAG Flow with Chunking ------
+
+ Documents/PDFs
+       ↓
+Text Extraction
+       ↓
+   Chunking
+       ↓
+   Embeddings
+       ↓
+Vector Database
+       ↓
+Semantic Search
+       ↓
+Relevant Chunks Retrieved
+       ↓
+LLM Generates Answer
+
+# Makes a Good Chunk
+
+A good chunk should:
+--> Contain meaningful information
+--> Preserve context
+--> Not be too large
+--> Not be too small
+--> Be semantically complete
+
+# Problems Without Proper Chunking
+
+Problem	                        Explanation
+Too Large Chunks	            Retrieval becomes inaccurate
+Too Small Chunks	            Context gets lost
+No Overlap	                    Important information may split
+Random Splitting	            Sentences become incomplete
+
+# Important Chunking Concepts
+
+1. Chunk Size
+Chunk size = Number of characters/tokens in one chunk.
+
+# Example:
+Chunk 1 → 500 characters
+Chunk 2 → 500 characters
+
+Typical sizes:
+
+Use Case	            Chunk Size
+Short documents	        200–500 tokens
+PDFs	                500–1000 tokens
+Code files	            100–300 lines
+Conversations	        300–800 tokens
+
+
+2. Chunk Overlap
+Overlap means repeating some content between adjacent chunks.
+
+Example:
+Chunk 1:
+AI is transforming healthcare through diagnostics...
+
+Chunk 2:
+through diagnostics and predictive analysis...
+
+Overlap helps:
+
+Preserve context
+Avoid information loss
+Improve retrieval quality
+
+Typical overlap:
+
+10%–20% of chunk size
+
+Example:
+
+chunk_size = 500
+chunk_overlap = 100
+
+3. Token-Based Chunking
+Splits text based on tokens.
+
+Better for LLMs because LLMs process tokens, not characters.
+
+Example:
+
+100 tokens per chunk
+
+Used with:
+
+GPT models
+OpenAI embeddings
+Ollama embeddings
+
+4. Character-Based Chunking
+Splits based on character count.
+
+Simpler but less accurate.
+
+Example:
+
+500 characters per chunk
+
+5. Sentence-Based Chunking
+Splits document sentence-by-sentence.
+
+Advantages:
+
+Maintains readability
+Better semantic meaning
+
+
+6. Recursive Chunking
+Most popular method in modern RAG systems.
+
+It tries multiple separators:
+
+Paragraphs → Sentences → Words
+
+This preserves structure better.
+
+Widely used in:
+
+LangChain
+LlamaIndex
+Production RAG systems
+Types of Chunking
+
+Type	                        Description
+Fixed-size chunking	            Equal-sized chunks
+Recursive chunking	            Smart hierarchical splitting
+Sentence chunking	            Sentence-based splitting
+Semantic chunking	            Meaning-based splitting
+Token chunking	                Token count based
+
+Sliding window chunking	Uses overlaps heavily
+Fixed-Size Chunking Example
+
+Input:
+Artificial Intelligence is transforming industries...
+
+Chunks:
+
+Chunk 1 → Artificial Intelligence is...
+Chunk 2 → transforming industries...
+
+Simple but may cut sentences.
+
+Recursive Chunking (Best Practice)
+
+Recursive chunking tries:
+
+--> Paragraph split
+--> Sentence split
+--> Word split
+
+Advantages:
+
+--> Better context
+--> Cleaner chunks
+--> More accurate retrieval
+
+Semantic Chunking
+
+Semantic chunking groups related meanings together.
+
+Instead of fixed size:
+
+Topic A → Chunk 1
+Topic B → Chunk 2
+
+Requires:
+
+Embeddings
+Similarity analysis
+
+Advanced but highly accurate.
+
+Chunking Strategies for Different Data
+Data Type	Best Chunking
+PDFs	Recursive
+Code	Function/Class based
+Legal docs	Section based
+Chat history	Conversation turns
+Research papers	Paragraph based
+Websites	HTML section based

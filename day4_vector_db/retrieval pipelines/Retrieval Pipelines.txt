@@ -1,0 +1,73 @@
+---------- Retrieval Pipelines ----------
+A Retrieval Pipeline is the complete workflow used in a RAG (Retrieval-Augmented Generation) system to:
+
+--> Accept a user query
+--> Retrieve relevant information from documents/databases
+--> Send the retrieved context to an LLM
+--> Generate an accurate answer
+It acts as the bridge between your knowledge base and the LLM.
+
+1. Retrieval Pipeline
+Imagine you have thousands of PDFs, documents, notes, or web pages.
+
+If a user asks:
+“What are the benefits of vector databases?”
+
+# The LLM alone may:
+--> hallucinate
+--> give outdated answers
+--> miss your company-specific data
+
+# So instead of relying only on the model memory, the system:
+--> Searches documents
+--> Finds relevant chunks
+--> Sends them to the LLM
+--> Generates grounded answers
+This entire flow is called the Retrieval Pipeline.
+
+
+# Main Stages of a Retrieval Pipeline
+
+--> Document Ingestion
+--> Text Chunking
+--> Embedding Generation
+--> Store in Vector Database
+--> Query Processing
+--> Similarity Search
+--> Context Assembly
+--> Prompt Construction
+--> LLM Generation
+
+
+# Complete Retrieval Pipeline Flow
+
+Documents
+   ↓
+Chunking
+   ↓
+Embeddings
+   ↓
+Vector Database
+   ↓
+User Query
+   ↓
+Query Embedding
+   ↓
+Similarity Search
+   ↓
+Relevant Chunks
+   ↓
+Prompt Construction
+   ↓
+LLM
+   ↓
+Final Answer
+
+
+# Types of Retrieval Pipelines
+
+--> Dense Retrieval
+--> Sparse Retrieval
+--> Hybrid Retrieval
+--> Multi-Stage Retrieval
+
