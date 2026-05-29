@@ -1,0 +1,67 @@
+----------- AI Agents -----------
+
+# An AI Agent is:
+An AI Agent is a software system that can:
+--> Observe information from users, APIs, files, or environments
+--> Reason about what to do
+--> Plan actions
+--> Use tools to complete tasks
+--> Remember context or previous interactions
+--> Act autonomously toward a goal
+
+Unlike a normal chatbot that only replies with text, an AI agent can:
+--> Search the web
+--> Read PDFs
+--> Send emails
+--> Query databases
+--> Call APIs
+--> Execute code
+--> Automate workflows
+--> Make decisions dynamically
+
+# AI Agent Architecture
+User Goal
+   ↓
+LLM Brain
+   ↓
+Reasoning
+   ↓
+Tool Selection
+   ↓
+Action Execution
+   ↓
+Observation
+   ↓
+Repeat Until Goal Completed
+
+# Key Characteristics of AI Agents
+Feature	                Description
+Reasoning	            Think step-by-step
+Planning	            Break goals into tasks
+Tool Usage	            Use APIs, DBs, search
+Memory	                Remember context
+Autonomy	            Act independently
+Iteration	            Retry if failed
+
+# Real-World AI Agent Examples
+Agent	                          Purpose
+Customer support agent	        Resolve tickets
+Research agent	                 Search + summarize
+Coding agent	                 Write/debug code
+Finance agent	                 Analyze transactions
+Personal assistant	           Schedule + reminders
+
+# Challenges of AI Agents
+Challenge	                    Description
+Hallucinations	                 Wrong answers
+Tool Failures	                 API/tool errors
+Cost	                          LLM API expenses
+Latency	                       Slow multi-step workflows
+Security	                       Sensitive data handling
+
+# Future of AI Agents
+--> Operate entire businesses
+--> Collaborate with other agents
+--> Continuously learn
+--> Perform autonomous research
+--> Control robotics and IoT systems

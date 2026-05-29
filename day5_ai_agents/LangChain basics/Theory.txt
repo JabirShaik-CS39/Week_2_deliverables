@@ -1,0 +1,85 @@
+---------- LangChain Basics ----------
+LangChain is a Python and JavaScript framework used to build applications powered by Large 
+Language Models (LLMs).
+
+It helps developers create:
+--> AI chatbots
+--> AI agents
+--> Workflow automation systems
+--> Retrieval-Augmented Generation (RAG) systems
+--> Autonomous reasoning systems
+--> Multi-step AI pipelines
+
+Instead of directly calling an LLM API every time, LangChain provides:
+--> Chains
+--> Agents
+--> Memory
+--> Prompt templates
+--> Tools
+--> Retrieval systems
+--> Workflow orchestration
+
+It helps connect:
+--> LLMs
+--> Tools
+--> Memory
+--> Chains
+--> Databases
+
+# LangChain Core Components
+Component	               Purpose
+LLMs	                     AI model
+Prompt Templates	         Dynamic prompts
+Chains	                  Sequence of operations
+Agents	                  Autonomous AI systems
+Tools	                     External capabilities
+Memory	                  Conversation memory
+Retrievers	               Search knowledge
+Vector Stores	            Store embeddings
+
+# LangChain Workflow Concepts
+A chain is:
+Multiple operations connected together.
+
+# Example Chain
+
+User Question
+   ↓
+Prompt Template
+   ↓
+LLM
+   ↓
+Output Parser
+   ↓
+Final Answer
+
+# Advantages of LangChain
+
+Feature	                     Benefit
+Modular Design	               Easy to build workflows
+Tool Integration	            Connect external systems
+Agent Support	               Autonomous reasoning
+Memory	                     Context awareness
+RAG Support                	Knowledge-based AI
+Multi-step Chains          	Complex automation
+
+# Limitations
+
+Issue	                        Explanation
+Complexity	                  Large workflows become difficult
+Cost	                        API calls can be expensive
+Latency	                     Multi-step reasoning takes time
+Hallucinations	               LLMs may generate wrong info
+Debugging	                  Agents can be hard to trace
+
+# LangChain vs Traditional Programming
+
+Traditional Apps              	LangChain Apps
+Fixed logic	                     Dynamic reasoning
+Manual rules	                  AI decision-making
+Predictable	                     Adaptive
+Static workflows	               Intelligent workflows
+
+
+
+

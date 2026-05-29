@@ -1,0 +1,162 @@
+---------- Memory ----------
+Memory is one of the most important concepts in AI agents and workflow automation systems.
+Without memory, an AI behaves like a stateless chatbot — it forgets everything after each interaction.
+
+With memory, AI agents can:
+--> Remember previous conversations
+--> Track tasks and workflow states
+--> Store user preferences
+--> Recall previous tool outputs
+--> Maintain long-term context
+--> Perform multi-step reasoning
+--> Automate processes intelligently
+Memory transforms an LLM from a simple text generator into an intelligent autonomous system.
+
+# Memory in AI Agents
+Memory is the mechanism that allows an AI system to store, retrieve, and use information across 
+interactions or workflow steps.
+
+# Human Analogy
+
+Humans use:
+--> Short-term memory → remembering a phone number temporarily
+--> Long-term memory → remembering your school name
+--> Working memory → solving a math problem step-by-step
+AI agents use similar concepts.
+
+# Memory is Important
+--> Without memory:
+
+User: My name is Jabir
+AI: Nice to meet you
+
+User: What is my name?
+AI: I don't know
+
+--> With memory:
+
+User: My name is Jabir
+AI: Nice to meet you
+
+User: What is my name?
+AI: Your name is Jabir
+
+# Types of Memory in AI Agents
+A. Short-Term Memory
+Also called:
+
+--> Conversation memory
+--> Context memory
+--> Session memory
+Stores temporary information during a session.
+
+Example
+User: I like Python
+AI stores it temporarily
+
+Used for:
+--> Chat history
+--> Current workflow state
+--> Active tasks
+
+B. Long-Term Memory
+Stores information permanently.
+
+Example
+User preference:
+Favorite language = Python
+
+Used for:
+--> User profiles
+--> Knowledge bases
+--> Historical workflow data
+--> Persistent personalization
+
+Usually stored in:
+--> Databases
+--> Vector databases
+--> Files
+--> Cloud storage
+
+C. Working Memory
+Temporary reasoning space used during problem solving.
+
+Example
+An AI solving:
+
+Find average sales
+
+It temporarily stores:
+--> Total sales
+--> Number of records
+--> Intermediate calculations
+
+D. Episodic Memory
+Stores experiences/events.
+
+Example:
+
+"Last week user asked for invoice automation"
+
+Useful in:
+--> Personalized assistants
+--> Recommendation systems
+--> Autonomous agents
+
+E. Semantic Memory
+Stores factual knowledge.
+
+Example:
+
+Python is a programming language
+
+Usually implemented with:
+--> Vector databases
+--> RAG systems
+
+4. Memory in Workflow Automation
+
+Workflow automation uses memory to maintain state across steps.
+
+Example Workflow
+Step 1 → User uploads invoice
+Step 2 → Extract invoice data
+Step 3 → Validate fields
+Step 4 → Save to database
+Step 5 → Send email
+
+Memory stores:
+--> Uploaded file info
+--> Extracted text
+--> Validation results
+--> Email status
+Without memory:
+Every step would start from zero.
+
+5. Memory in AI Agents
+AI agents need memory to:
+--> Plan tasks
+--> Track completed actions
+--> Avoid repeating work
+--> Remember tool outputs
+--> Handle multi-step reasoning
+
+6. Memory Architecture in AI Agents
+                +----------------+
+                |     User       |
+                +--------+-------+
+                         |
+                         v
+                +----------------+
+                |      Agent     |
+                +--------+-------+
+                         |
+          +--------------+--------------+
+          |                             |
+          v                             v
++-------------------+      +----------------------+
+| Short-Term Memory |      | Long-Term Memory     |
++-------------------+      +----------------------+
+          |                             |
+          v                             v
+   Current Context             Database / Vector DB

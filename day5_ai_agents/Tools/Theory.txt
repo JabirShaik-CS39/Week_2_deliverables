@@ -1,0 +1,80 @@
+---------- Tools in AI Agents ----------
+Tools are external functions the AI can use.Tools in Workflow Automation & AI Agents
+In AI Agents and Workflow Automation, Tools are external functions, APIs, databases, or 
+utilities that an AI agent can use to perform real-world tasks.Without tools, an AI model can 
+only generate text.
+
+# With tools, an AI agent can:
+--> Search the web
+--> Read files
+--> Send emails
+--> Query databases
+--> Execute Python code
+--> Call APIs
+--> Automate workflows
+--> Control software/apps
+
+# Examples of Tools
+Tool	               Purpose
+Calculator	         Math
+Search API	         Internet search
+Database Tool	      Query data
+Email Tool	         Send email
+Python Tool	         Execute code
+Weather API	         Get weather
+
+# Tool-Based Agent Flow
+User asks:
+"What is 25 * 88?"
+
+Agent thinks:
+"I should use calculator"
+
+Tool executes
+→ Returns 2200
+Agent responds
+
+
+# Tools in AI Agents
+A Tool is anything an AI agent can call to:
+--> Get information
+--> Perform an action
+--> Interact with systems
+
+# Think of tools as:
+“Superpowers given to an AI model.”
+
+
+# Tools Are Important
+LLMs like GPT are limited because:
+
+--> They don’t know live data
+--> They cannot access your systems directly
+--> They cannot execute actions alone
+Tools solve this problem.
+
+# Real-World Example
+Imagine an AI customer support agent.
+
+Without tools:
+--> It only replies with text.
+
+With tools:
+--> It can check orders
+--> Refund money
+--> Search knowledge bases
+--> Update tickets
+--> Send emails
+
+# Architecture of Tool-Based AI Agents
+User Request      
+   ↓
+AI Agent      
+   ↓
+Decides Which Tool to Use      
+   ↓
+Executes Tool      
+   ↓
+Gets Result      
+   ↓
+Generates Final Response

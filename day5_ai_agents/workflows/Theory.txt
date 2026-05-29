@@ -1,0 +1,98 @@
+---------- Workflow ----------
+A workflow is a sequence of connected steps that automate a task from start to finish.
+In AI systems, workflows combine:
+
+--> LLMs (Large Language Models)
+--> Tools/APIs
+--> Memory
+--> Decision making
+--> Multi-step processing
+The goal is to make AI perform tasks automatically instead of requiring manual human actions.
+
+#  Workflow
+A workflow is:
+Input → Processing Steps → Output
+
+Example:
+
+User Question
+   ↓
+AI Understands Intent
+   ↓
+Search Database
+   ↓
+Generate Response
+   ↓
+Return Final Answer
+
+# Workflows Are Important
+
+Workflows help:
+
+Automate repetitive tasks
+Connect multiple systems
+Reduce manual effort
+Improve consistency
+Enable AI agents to think step-by-step
+
+
+3. Traditional Automation vs AI Workflows
+Traditional Automation	AI Workflow
+Fixed rules	Dynamic reasoning
+Predefined logic	AI can decide
+No understanding	Understands language
+Limited flexibility	Adaptive
+Example: IF-ELSE	Example: AI agent
+
+
+4. Components of an AI Workflow
+
+A. Input Layer
+Receives:
+--> User query
+--> File
+--> Audio
+--> API request
+
+Example:
+user_input = "Summarize this PDF"
+
+B. Processing Layer
+The AI:
+--> Understands request
+--> Plans actions
+--> Chooses tools
+--> Executes tasks
+
+Example:
+Read PDF → Extract Text → Summarize
+
+C. Tool Layer
+AI may use:
+--> Search engines
+--> Databases
+--> APIs
+--> Calculators
+--> Python functions
+
+Example:
+--> search_tool()
+--> database_tool()
+--> email_tool()
+
+D. Memory Layer
+Stores:
+--> Conversation history
+--> Previous outputs
+--> User preferences
+
+Example:
+User likes concise answers
+
+E. Output Layer
+Returns:
+--> Text
+--> JSON
+--> Email
+--> Report
+--> Dashboard

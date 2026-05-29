@@ -1,0 +1,66 @@
+---------- Workflow Automation & AI Agents ----------
+
+Workflow Automation and AI Agents are advanced concepts used to build intelligent 
+systems that can:
+--> Think step-by-step
+--> Use tools
+--> Remember previous conversations
+--> Automate repetitive tasks
+--> Make decisions dynamically
+--> Connect with APIs, databases, and external systems
+
+# These concepts are heavily used in:
+--> AI Assistants
+--> Autonomous agents
+--> RAG systems
+--> Business automation
+--> Chatbots
+--> Data pipelines
+--> Multi-agent systems
+
+# Workflow Automation
+
+# Workflow automation means:
+Automating a sequence of tasks using logic and AI.
+
+# Instead of manually doing:
+--> Read input
+--> Search database
+--> Analyze data
+--> Generate report
+--> Send email
+An AI workflow can do everything automatically.
+
+# Traditional Workflow vs AI Workflow
+
+Traditional Automation	                       AI Workflow
+Rule-based	                                   Intelligent
+Fixed logic	                                   Dynamic reasoning
+No understanding	                           Understands context
+Static responses	                           Generates responses
+Cannot learn	                               Uses memory/history
+
+
+# Example Workflow
+Resume Screening Workflow
+
+Upload Resume
+      ↓
+Extract Text
+      ↓
+Generate Embeddings
+      ↓
+Compare with Job Description
+      ↓
+Score Candidate
+      ↓
+Send Result to HR
+
+# Real-World Use Cases
+
+Use Case	                  Workflow
+Customer Support	            Ticket → AI Response → Escalation
+Healthcare	                  Symptoms → Diagnosis Suggestions
+HR	                        Resume → Ranking → Interview Scheduling
+Finance	                  Invoice → Validation → Approval
+Education	                  PDF → Summarization → Quiz Generation
